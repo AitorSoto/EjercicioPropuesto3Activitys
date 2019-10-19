@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btActivity2 = (Button) findViewById(R.id.btActivity2);
 
         btActivity1.setOnClickListener(this); // Da de alta la clase en el Manifest
+        btActivity2.setOnClickListener(this);
     }
 
     public void onClick(View view){
@@ -29,8 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             intent.putExtra("Entrada", "Activity 1");
             startActivity(intent);
         } else{
-            Intent intent = new Intent(this, Activity1.class);
-            intent.putExtra("Entrada", "Activity 1");
+            Intent intent = new Intent(this, Activity2.class);
+            intent.putExtra("Entrada", "Activity 2");
             startActivity(intent);
         }
 
