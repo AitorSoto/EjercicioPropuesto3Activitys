@@ -1,6 +1,7 @@
 package com.example.ejerciciopropuesto3activitys;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -26,8 +27,9 @@ public class Activity2 extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent();
+        intent.setData(Uri.parse("Activity 2"));
+        setResult(RESULT_OK, intent);
         this.finish();
-        //startActivity(intent);
     }
 }

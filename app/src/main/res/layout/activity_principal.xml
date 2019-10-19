@@ -33,12 +33,13 @@
             android:layout_below="@id/toolbar"
             android:layout_margin="10dp"/>
         <TextView
+            android:id="@+id/tvTexto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="visible"
+            android:visibility="gone"
             android:layout_below="@id/btActivity1"
-            android:text="hola"
-            android:textSize="90px"
+            android:textSize="80px"
+            android:textColor="#000"
             android:layout_margin="10dp"/>
     </RelativeLayout>
 </LinearLayout>
