@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
+        getSupportActionBar().hide();
 
         btActivity1 = (Button) findViewById(R.id.btActivity1);
         btActivity2 = (Button) findViewById(R.id.btActivity2);
@@ -27,11 +28,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view){
         if (view.getId() == R.id.btActivity1) {
             Intent intent = new Intent(this, Activity1.class);
-            intent.putExtra("Entrada", "Activity 1");
+            intent.putExtra("Salida", "Activity principal");
             startActivity(intent);
         } else{
             Intent intent = new Intent(this, Activity2.class);
-            intent.putExtra("Entrada", "Activity 2");
+            intent.putExtra("Salida", "Activity principal");
             startActivity(intent);
         }
 
